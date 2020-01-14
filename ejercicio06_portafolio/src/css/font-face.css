@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'PT Sans Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/PT_Sans/PTSans-Regular.eot');
+    src: url('../fonts/PT_Sans/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/PT_Sans/PTSans-Regular.woff2') format('woff2'),
+       url('../fonts/PT_Sans/PTSans-Regular.woff') format('woff'),
+       url('../fonts/PT_Sans/PTSans-Regular.ttf')  format('truetype'), 
+       url('../fonts/PT_Sans/PTSans-Regular.svg#svgFontName') format('svg');
+}
+@font-face {
+    font-family: 'Comic Sans';
+    font-style: regular;
+    font-weight: 400;
+    src: url('../fonts/comic-sans/COMIC.eot');
+    src: url('../fonts/comic-sans/COMIC.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/comic-sans/COMIC.woff2') format('woff2'),
+       url('../fonts/comic-sans/COMIC.woff') format('woff'),
+       url('../fonts/comic-sans/COMIC.ttf')  format('truetype'), 
+       url('../fonts/comic-sans/COMIC.svg#svgFontName') format('svg');
+}
