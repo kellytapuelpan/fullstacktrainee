@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'PT Sans';
+    font-style: bold;
+    font-weight: 700;
+    src: local('PT Sans Black'), url('../src/fonts/PTSans-Bold.ttf') format('ttf');
+}
+body {
+    background-color: #fcbbef;
+    font-family: 'PT Sans';
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+h1 {
+    font-size: 35px;
+    color: #420335;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 25px;
+    columns: #333;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+a {
+    color: #8a1372;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #24071e;
+}
+
+section {
+    border-bottom: 1px solid #666;
+}
+
+section:last-child {
+    border: none;
+}
+
+input {
+    border: 1px solid #420335 !important;
+}
+
+.btn {
+    background: #420335 !important;
+}
+
+.btn:hover {
+    background-color: #8a1372 !important;
+}
+.card {
+    padding:15px 20px;
+}

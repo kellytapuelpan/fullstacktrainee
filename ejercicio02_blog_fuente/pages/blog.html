@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blog de Kelly</title>
+    <meta name="description" content="Este es el ejercicio para el Blog ficticio." />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/css/font-face.css" type="text/css">
+    <link rel="stylesheet" href="../src/css/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="main-content col-8">
+        <section id="presentacion" class="row justify-content-center">
+            <h1 class="text-left col-12 mt-5">Blog de Kelly</h1>
+            <div class="p-4 col-12">
+                <img src="../src/img/pole_snow.jpg" class="img-fluid">
+            </div>
+            <div class="p-4 col-12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse neque elit, posuere ut sagittis quis, dictum accumsan enim. Pellentesque venenatis, dui et mollis aliquet, dolor sapien ullamcorper ipsum, et tincidunt nunc erat in dui.
+                    Donec ex justo, euismod in fermentum eget, <a href="In faucibus lectus diam, in dignissim felis feugiat eget" target="_blank">malesuada in mauris</a>. Vivamus egestas neque in metus fermentum sodales. Nam gravida lectus in mi consectetur,
+                    et semper tellus scelerisque. Vivamus eleifend elit et ullamcorper tincidunt. Fusce non maximus nibh. Proin sit amet ultrices nisi, ut suscipit ipsum. Vestibulum blandit, nisl at interdum hendrerit, diam orci malesuada felis, eget
+                    elementum odio massa at lorem. Praesent in quam hendrerit, sagittis nisi vel, venenatis erat. In molestie, lectus et consectetur maximus, orci nunc auctor velit, nec congue arcu eros vitae est.</p>
+                <p>Vestibulum sed nulla eget mi luctus porta sit amet vel augue. Vestibulum ipsum eros, mollis ut erat non, consequat gravida dolor. Ut maximus purus quis purus sollicitudin molestie. Mauris mi arcu, convallis eu pretium laoreet, efficitur
+                    sit amet massa. Morbi vulputate condimentum pharetra. Donec nec sem libero. Duis vitae nisi eros. Sed volutpat placerat lacus ut ullamcorper. Curabitur nec sagittis massa. Donec aliquam ultrices arcu, eu dignissim dui. Integer nisi
+                    lorem, fermentum aliquam mi ac, <a href="In faucibus lectus diam, in dignissim felis feugiat eget" target="_blank">sodales pharetra</a> leo. Cras diam velit, finibus non blandit ac, imperdiet non nibh. Aliquam varius magna tortor,
+                    sit amet commodo nunc fermentum ac. Vestibulum eu placerat dui, et molestie diam. Sed tempus, quam sed bibendum pharetra, orci mi faucibus sapien, eleifend fermentum tellus mauris ultrices ex. Vivamus tempus iaculis blandit.</p>
+                <p>Integer a mauris sagittis, euismod metus quis, finibus nibh. Curabitur vel pretium sapien, sit amet finibus lorem:</p>
+                <ul>
+                    <li>Curabitur vel pretium sapien, sit amet finibus lorem</li>
+                    <li>Nunc sit amet finibus risus</li>
+                    <li>In faucibus lectus diam, in dignissim felis feugiat eget</li>
+                </ul>
+                <div class="card">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse neque elit, posuere ut sagittis quis, dictum accumsan enim. Pellentesque venenatis, dui et mollis aliquet, dolor sapien ullamcorper ipsum, et tincidunt nunc erat in dui.
+                        Donec ex justo, euismod in fermentum eget, <a href="In faucibus lectus diam, in dignissim felis feugiat eget" target="_blank">malesuada in mauris</a>. Vivamus egestas neque in metus fermentum sodales. Nam gravida lectus in mi consectetur,
+                        et semper tellus scelerisque. Vivamus eleifend elit et ullamcorper tincidunt. Fusce non maximus nibh. Proin sit amet ultrices nisi, ut suscipit ipsum. Vestibulum blandit, nisl at interdum hendrerit, diam orci malesuada felis, eget
+                        elementum odio massa at lorem. Praesent in quam hendrerit, sagittis nisi vel, venenatis erat. In molestie, lectus et consectetur maximus, orci nunc auctor velit, nec congue arcu eros vitae est.</p>
+                </div>
+            </div>
+        </section>
+        <section id="data-info" class="row justify-content-center py-4">
+            <h2 class="text-left col-12">Horarios</h2>
+            <table class="col-6 mb-4">
+                <thead>
+                    <tr>
+                        <th>Entre semana</th>
+                        <th>Fines de semana</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:30 a 19:00 hrs.</td>
+                        <td>9:00 a 18:00 hrs.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="data-form" class="row justify-content-center pt-4 pb-5">
+            <h3 class="text-left col-12 mb-5">Ahora, por favor ayúdanos a seguir mejorando, completando el siguiente formulario</h3>
+            <form method="POST" action="/" name="encuesta" id="encuesta" class="col-8">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="how">¿Cómo supiste de nosotros?</label>
+                    <div class="form-check">
+                        <input type="checkbox" name="how" id="facebook">
+                        <label for="facebook">Facebook</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="how" id="instragram">
+                        <label for="instagram">Instagram</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="how" id="google">
+                        <label for="google">Google</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="how" id="busqueda">
+                        <label for="busqueda">Búsqueda en otros Navegadores</label>
+                    </div>
+                </div>
+                <div class="">
+                    <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Enviar">
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
