@@ -1,0 +1,36 @@
+@media screen and (max-width: 480px) {
+    [class*="col-"] {
+        width: 100%;
+        text-align:  center;
+    }
+    #header .search-form {
+        margin: 0 auto;
+    }
+    #main-nav ul {
+        margin-top: 20px;
+    }
+    #main-nav ul li {
+        display: block;
+        text-align: center;
+    }
+    #main-nav a {
+        font-size: 18px;
+    }
+    .navbar-toggler {
+        margin: 0 auto;
+        background: #fff;
+    }
+    .navbar-toggler i, .navbar-toggler svg {
+        font-size: 28px;
+        color: #666;
+    }
+    .top-row .cont-text, .bottom-row .col-text {
+        margin: 0 auto;
+    }
+    .bottom-row .col-text {
+        padding-right: 15px;
+    }
+    #footer a {
+        font-size: 16px;
+    }
+}
