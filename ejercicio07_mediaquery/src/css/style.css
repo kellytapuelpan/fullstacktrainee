@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Assistant', sans-serif;
+    background: #EEF1BD;
+}
+p {
+    color: #333;
+    margin: 15px 0;
+    padding: 0;
+    font-size: 17px;
+}
+a {
+    color: #000;
+    text-decoration: underline;
+}
+a:hover {
+    color: #666;
+}
+.container {
+    max-width: 980px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+[class*="col-"] {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.mobile {
+    display: none;
+}
+.desktop {
+    display: block;
+}
+#wrapper {
+    width: 100%;
+}
+#header {
+    display: block;
+    background: #C4A381;
+}
+#header h1 {
+    margin: 0;
+    padding: 80px 0;
+    font-size: 40px;
+    color: #644536;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    margin-left: -15px;
+}
+#header img {
+    display: block;
+}
+#main-content {
+    display: block;
+}
+#intro {
+    display: block;
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+    border-bottom: 10px solid #644536;
+}
+#intro h1 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: #B2675E;
+}
+#intro h2 {
+
+}
+#intro .text-intro {
+    margin: 0 auto;
+}
+#main_content p {
+    font-size: 18px;
+    line-height: 140%;
+}
+#main_content .row:first-child {
+    margin-bottom: 20px;
+}
+#main_content .main_col {
+    background: #e4d9e3;
+    min-height: 285px;
+}
+#bottom-page {
+    background: #fff;
+    border-bottom: 10px solid #B2675E;
+}
+#bottom-page .int-text {
+    max-width: 90%;
+}
+#bottom-page p {
+    margin-top: 80px;
+    vertical-align: middle;
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
+#bottom-page img {
+    display: block;
+}
+#footer {
+    padding: 10px;
+    text-align: center;
+    background: #f7f7f7;
+    color: #000;
+}
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+#footer a {
+    color: #000;
+    font-style:italic;
+}
+#footer a:hover {
+    color: #666;
+}
+#footer a img {
+    display: inline;
+    margin-right:5px;
+    width: 20px;
+    height: 20px;
+}
+#footer ul {
+    list-style-type: none;
+}
+#footer li {
+    display: inline;
+}
+
+/*END*/
