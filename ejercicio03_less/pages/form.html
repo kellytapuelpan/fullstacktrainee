@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <meta name="description" content="Este es el ejercicio para el Formulario de login." />
+    <link rel="stylesheet" href="../src/css/style.css" type="text/css">
+</head>
+
+<body>
+    <div>
+        <section>
+            <h1>Login Form</h1>
+            <form method="POST" action="/" id="login-form" name="login-form">
+                <div class="box box01">
+                    <div class="center-align">
+                        <img src="../src/img/user.jpeg" alt="User image" class="avatar">
+                    </div>
+                    <div class="form-separation">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" placeholder="Enter Username" required>
+                    </div>
+                    <div class="form-separation">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="form-separation">
+                        <input type="submit" name="Login" id="login" value="Login">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="remember" id="remember">
+                        <label class="check">Remember me</label>
+                    </div>
+                </div>
+                <div class="box02">
+                    <input type="button" name="Cancel" id="cancel" value="Cancel">
+                    <span>Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
