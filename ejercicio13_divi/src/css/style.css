@@ -1,0 +1,195 @@
+.header-content h1 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.4em;
+}
+.container {
+    position: relative;
+    text-align: left;
+    padding: 0;
+}
+section {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    position: relative;
+    background-color: #fff;
+}
+.blue-back {
+    color: #fff;
+}
+.blue-back h1 {
+    color:#fff;
+}
+.column {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.clearfix {
+
+}
+.passthrough {
+    mix-blend-mode: unset!important;
+}
+.section00 .header-content {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.section00 h1 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.4em;
+}
+.section00 .content-wrapper {
+    font-size: 22px;
+    line-height: 1.8em;
+}
+.section01 .container {
+    padding-top: 10px !important;
+}
+.section01 h4 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 22px;
+    color: #1f1f1f!important;
+    line-height: 1.8em;
+}
+.section01 .cont-description {
+    padding: 0 15px;
+}
+.section01 .cont-module {
+    font-size: 16px;
+    line-height: 1.9em;
+}
+.section01 .module {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+    .section01 .module {
+        margin-bottom: 30px;
+    }
+}
+.section01 .module-description {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+.section01 .module-image {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 30px;
+    line-height: 0;
+}
+.section01 .module-icon {
+    font-size: 60px;
+    color: #4e5ed0;
+}
+.section02 .description h2 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif!important;
+    font-size: 36px!important;
+    color: #1f1f1f!important;
+    line-height: 1.4em!important;
+}
+.section02 .back-image {
+    background-position: top left;
+    background-image: url('../img/business-15.jpg'),linear-gradient(180deg,#2b87da 0%,#29c4a9 100%);
+}
+.section02 .text-column {
+    background-color: #f4f4f4;
+    padding-top: 8%;
+    padding-right: 6%;
+    padding-bottom: 8%;
+    padding-left: 6%;
+}
+.section02 .promo-description {
+    position: relative;
+    padding-bottom: 20px;
+    word-wrap: break-word;
+}
+.section03 {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(180deg,rgba(76,72,227,0.96) 0%,rgba(73,108,220,0.93) 100%)!important;
+}
+.section03 h1 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 36px;
+}
+.section03 .blue-layout h1 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 36px;
+    color: #fff;
+}
+.section03 .blue-layout p:not(.has-background):last-of-type {
+    padding-bottom: 0;
+    color: #fff;
+}
+.section04 h3 {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 22px !important;
+    color: #1f1f1f!important;
+    padding-bottom: 15px;
+    font-weight: 500;
+    line-height: 1em;
+}
+.parallax-bg-wrap {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax-bg {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.btn.btn-more {
+    border-radius: 0px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif!important;
+    text-transform: uppercase!important;
+    background-color: #6eba01;
+    transition: color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms,letter-spacing 300ms ease 0ms,color 300ms ease 0ms,background-color 300ms ease 0ms,border 300ms ease 0ms,letter-spacing 300ms ease 0ms;
+    border: 2px solid #6eba01;
+    color:#fff;
+    font-weight: 500;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.btn.btn-more:hover {
+    background: #fff;
+    color: #6eba01;
+    border: 2px solid #fff;
+}
+@media only screen and (min-width: 1350px) {
+    section {
+        padding: 54px 0;
+    }
+}
+#footer {
+    background-color: #222;
+}
+#footer #footer-bottom {
+    padding: 15px 0 5px;
+    background-color: #1f1f1f;
+    background-color: rgba(0,0,0,.32);
+}
+#footer svg {
+    font-size:24px;
+}
