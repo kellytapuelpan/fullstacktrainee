@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+#wrapper {
+
+}
+#wrapper .row:nth-child(8) {
+    margin-bottom: 15px;
+}
+.row span.nro {
+    color: #fd0000;
+    font-size: 12px;
+    line-height: 55px;
+}
+.row span.text {
+    padding-top: 10px;
+    line-height: 15px;
+}
+.row span:nth-child(3) {
+    margin-right: 15px;
+}
+.row.double-row span:nth-child(3) {
+    margin-right: 1px;
+}
+.row.header-row {
+    color: #fd0000;
+    font-size: 12px;
+}
+.row.header-row span {
+    border: 1px solid #fff;
+    margin: 0 1px 1px 0;
+    vertical-align: middle;
+    min-height: 55px;
+}
+.row.header-row span:nth-child(3) {
+    margin-right: 15px;
+}
+span {
+    width: 5%;
+    display: inline-flexbox;
+    text-align: center;
+}
+span.double {
+    position: relative;
+    border: 1px solid #fff;
+    width: 15% !important;
+    margin-right: 16px;
+    line-height: 55px;
+}
+span.element {
+    border: 1px solid #808080;
+    text-align: center;
+    margin: 1px 1px 0 0;
+    min-height: 55px;
+    box-sizing: border-box;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+span.element:hover {
+    cursor: pointer;
+    -webkit-transform: scale(3, 3);
+    -ms-transform: scale(3, 3);
+    transform: scale(3, 3);
+}
+span.element span {
+    display: block;
+    width: 100%;
+}
+span.element.no-element {
+    border: 1px solid #fff;
+}
+span.element.no-element:hover {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    cursor: none;
+}
+span.element span:first-child, span.element span:last-child {
+    font-size: 10px;
+}
+span.element span:nth-child(2) {
+    font-size: 15px;
+    color: #1913a2;
+    font-weight: bold;
+}
+span.text-right {
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+.blue-element {
+    background: #689bff;
+}
+.yellow-element {
+    background: #fecb00;
+}
+.pink-element {
+    background: #fd9a98;
+}
+.green-element {
+    background: #1fca21;
+}
+
+/*END*/

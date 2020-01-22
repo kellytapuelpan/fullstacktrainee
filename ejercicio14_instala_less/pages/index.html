@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Python</title>
+      <title>Responsive</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet/less" type="text/css" href="../src/less/style.less" />
       <link href="../src/css/all.css" rel="stylesheet">
+      <link href="../src/css/query.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+      <script src="../src/js/less.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
       <script defer src="../src/js/all.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -16,127 +18,71 @@
          <div id="header">
             <div class="container">
                <div class="row">
-                  <div class="col-md-6 col-12">
-                     <a href="#">
-                        <img src="../src/img/python.png" alt="Python">
-                     </a>
+                  <div class="col-3">
+                     <img src="../src/img/header.jpg" class="img-fluid" alt="">
                   </div>
-                  <div class="col-md-2 col-12"></div>
-                  <div class="col-md-4 col-12 px-0">
-                     <div class="search-form">
-                        <p>Text size: <a href="#">Normal</a> <span>|</span> <a href="#">Large</a></p>
-                        <form method="POST" action="/" id="form-searching" class="form-seaching">
-                           <input type="search" id="search" name="search" placeholder="Search">
-                           <button id="search-button" class="search-button" name="go">Go</button>
-                        </form>
-                     </div>
+                  <div class="col-9">
+                     <h1>Probando Responsive</h1>
                   </div>
                </div>
-               <nav id="main-nav" class="navbar navbar-expand-md">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon">   
-                        <i class="fas fa-bars"></i>
-                     </span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarmain">
-                     <ul class="main-navigation">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Downloads</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Events</a></li>
+            </div>
+         </div>
+         <div class="side-container">
+            <div class="mobile">
+               <input data-function="swipe" id="swipe" type="checkbox">
+               <label data-function="swipe" for="swipe"><i class="fas fa-times-circle"></i></label>
+               <label data-function="swipe" for="swipe"><i class="fas fa-bars"></i></label>
+               <div class="sidebar">
+                  <nav class="menu">
+                     <ul>
+                        <li><a href="#">Enlace 1</a></li>
+                        <li><a href="#">Enlace 2</a></li>
+                        <li><a href="#">Enlace 3</a></li>
+                        <li><a href="#">Enlace 4</a></li>
+                        <li><a href="#">Enlace 5</a></li>
+                        <li><a href="#">Enlace 6</a></li>
                      </ul>
-                  </div>
-               </nav>
+                  </nav>
+               </div>
             </div>
          </div>
          <div id="main-content">
             <div class="top-row">
                <div class="container">
                   <div class="row">
-                     <div class="col-md-4 col-12">
-                        <nav id="secondary-nav">
-                           <ul>
-                              <li><i class="fas fa-angle-double-right"></i><a href="">Docs</a></li>
-                              <li><i class="fas fa-angle-double-right"></i><a href="">Audio/Visual Talks</a></li>
-                              <li><i class="fas fa-angle-double-right"></i><a href="">Beginner's Guide</a></li>
-                              <li><i class="fas fa-angle-double-right"></i><a href="">Developer's Guide</a></li>
-                              <li><i class="fas fa-angle-double-right"></i><a href="">POP Index</a></li>
-                              <li><i class="fas fa-angle-double-right"></i><a href="">Python Books</a></li>
-                              <li><i class="fas fa-angle-double-right"></i><a href="">FAQ</a></li>
-                           </ul>
-                        </nav>
-                     </div>
-                     <div class="col-md-8 col-12">
-                        <div class="cont-text">
-                           <p>
-                              First appearing in 1991, Python is a general purpose, high-level, interpreter programming language whose design focus emphasizes code readability.
-                              Whether for processing/analyzing data to powering many well-know applications, Python is not only a great language for new programmers but also powerful
-                              enough for seasoned developers building whatever they can think of.
-                           </p>
-                           <ul>
-                              <li>Beautiful is better than ugly;</li>
-                              <li>Explicit is better than implicit;</li>
-                              <li>Simple is better than complex;</li>
-                              <li>Complex is better than complicated;</li>
-                              <li>Readibilty counts;</li>
-                              <li>The Zen of Python</li>
-                           </ul>
+                     <section id="intro">
+                        <h1>Quienes Somos</h1>
+                        <div class="text-intro col-8">
+                           <p>Donec non aliquam magna, ac interdum dui. Nunc ac posuere magna. Quisque sit amet erat ac sapien egestas imperdiet. Donec erat neque, eleifend a nulla nec, efficitur bibendum dolor. Proin hendrerit, nisi ut lobortis tincidunt, lectus odio pulvinar dolor, et congue est ligula quis mi. Nunc elementum mauris sed tristique viverra. Suspendisse eget maximus elit. Suspendisse potenti. Nunc quam lectus, maximus et eros interdum, posuere maximus erat.</p>
+                           <p>Donec non aliquam magna, ac interdum dui. Nunc ac posuere magna. Quisque sit amet erat ac sapien egestas imperdiet. Donec erat neque, eleifend a nulla nec, efficitur bibendum dolor. Proin hendrerit, nisi ut lobortis tincidunt, lectus odio pulvinar dolor, et congue est ligula quis mi. Nunc elementum mauris sed tristique viverra. Suspendisse eget maximus elit. Suspendisse potenti. Nunc quam lectus, maximus et eros interdum, posuere maximus erat.</p>
                         </div>
-                     </div>
+                     </section>
                   </div>
                </div>
             </div>
             <div class="bottom-row">
                <div class="container">
                   <div class="row">
-                     <div class="col-md-6 col-12">
-                        <div class="col-text">
-                           <h2>Getting Started</h2>
-                           <p>
-                              Python can be easy to pick up whether you're a first time programmer or you're experienced with other languages.
-                              The following pages are a useful first step to get on your way writing programs with Python!
-                           </p>
-                           <ul>
-                              <li><a href="#">Beginner's Guide, Programmers</a></li>
-                              <li><a href="#">Beginner's Guide, Non Programmers</a></li>
-                              <li><a href="#">Code sample and snipperts for Beginners</a></li>
-                           </ul>
-                        </div>
+                     <div class="col-6 cont-img px-0">
+                        <img src="../src/img/cerdito01.jpg" class="img-fluid" alt="">
                      </div>
-                     <div class="col-md-6 col-12">
-                        <div class="col-text">
-                           <h2>Applications</h2>
-                           <p>
-                              The Python Package Index (PyPI) hosts thousands of third party modules for Python. Both Python's standard library and the community-contributed
-                              modules allow for endless possibilities.
-                           </p>
-                           <ul>
-                              <li><a href="#">Web and Internet Development</a></li>
-                              <li><a href="#">Database Access</a></li>
-                              <li><a href="#">Desktop GUIs</a></li>
-                              <li><a href="#">Network Programming</a></li>
-                              <li><a href="#">Software and Game Development</a></li>
-                           </ul>
-                        </div>
+                     <div class="col-6 cont-img px-0">
+                        <img src="../src/img/cerdito02.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="col-6 cont-img px-0">
+                        <img src="../src/img/cerdito03.jpg" class="img-fluid" alt="">
+                     </div>
+                     <div class="col-6 cont-img px-0">
+                        <img src="../src/img/cerdito04.jpg" class="img-fluid" alt="">
                      </div>
                   </div>
                </div>
             </div>      
          </div>
          <div id="footer">
-            <ul>
-               <li><a href="#">Help and General Contact</a></li>
-               <li><a href="#">Diversity Initiatives</a></li>
-               <li><a href="#">Submit Website Bugs</a></li>
-            </ul>
             <p>Copyright &copy; 2001-2016</p>
          </div>
       </div><!-- end of wrapper -->
 
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   </body>
+      </body>
 </html>

@@ -9,27 +9,22 @@
 @light-blue: #75a8d3;
 @yellow01: #ffde5a;
 @yellow02: #f0ca46;
-.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 1) {
-    -webkit-box-shadow: @x @y @blur rgba(32, 44, 55, @alpha);
-    -moz-box-shadow: @x @y @blur rgba(32, 44, 55, @alpha);
-    box-shadow: @x @y @blur rgba(32, 44, 55, @alpha);
+
+@box-shadow {
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(32,44,55,1);
+    -moz-box-shadow: 3px 3px 3px 0px rgb(80, 108, 134);
+    box-shadow: 3px 3px 3px 0px rgba(32,44,55,1);
 }
-.gradient (@origin: top, @start: #205276, @stop: #3776a9) {
-    background-color: @start;
-    background-image: -webkit-linear-gradient(@origin, @start, @stop);
-    background-image: -moz-linear-gradient(@origin, @start, @stop);
-    background-image: -o-linear-gradient(@origin, @start, @stop);
-    background-image: -ms-linear-gradient(@origin, @start, @stop);
-    background-image: linear-gradient(@origin, @start, @stop);
+@gradient {
+    background: rgb(38,82,118);
+    background: linear-gradient(180deg, rgba(38,82,118,1) 0%, rgba(55,117,169,1) 100%);
 }
 
 * {margin: 0px; padding: 0px;}
 body {font-family: @font; background: @white;}
 p {margin: 0; padding: 0; color: #000; font-size: 17px;}
 a {color: #000; outline: none; box-shadow: none;}
-nav {
-    ul {margin: 0; padding: 0; list-style-type: none;}
-}
+nav ul {margin: 0; padding: 0; list-style-type: none;}
 ::-webkit-input-placeholder {color: @light-gray;}
 ::-moz-placeholder {color: @light-gray;}
 :-ms-input-placeholder {color: @light-gray;}
@@ -54,10 +49,9 @@ nav {
     }
 }
 #main-nav {
-    max-width: 90%; margin: 10px auto; background: @blue01; text-align: center; font-size: 22px; padding: 7px 0; border-radius: 6px; .box-shadow(3px, 3px, 3px, 1); ;
+    max-width: 90%; margin: 10px auto; background: @blue01; text-align: center; font-size: 22px; padding: 7px 0; border-radius: 6px; box-shadow: @box-shadow;
     ul {
         list-style-type: none;
-        margin: 0 auto;
         li {display: inline; margin: 0 20px; font-style: normal;}
     }
     a {
@@ -106,7 +100,7 @@ nav {
     }
 }
 #footer {
-    padding: 60px 0 20px; text-align: center; color: @light-blue; .gradient(top, #205276, #3776a9);
+    padding: 60px 0 20px; text-align: center; color: @light-blue; background: @gradient;
     ul {
         margin: 0 0 15px; padding: 0; list-style-type: none;
         li {display: inline; margin: 0 20px;}
