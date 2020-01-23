@@ -37,7 +37,7 @@ img.img-fluid {
     display: block;
 }
 .top-row {
-    padding: 80px 0 100px;
+    padding: 0px;
 }
 .bottom-row .cont-img {
     max-height: 250px;
@@ -50,12 +50,17 @@ img.img-fluid {
     position: relative;
     min-height: 1px;
 }
+.row {margin: 0 !important;}
+#header .row {
+    background: #856D87;
+}
 #intro {
     text-align: center;
     color: #fff;
 }
 #intro h1 {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    font-size: 40px;
 }
 #intro .text-intro {
     max-width: 90%;
@@ -65,6 +70,10 @@ img.img-fluid {
 #intro .text-intro p {
     margin-bottom: 30px;
     color: #fff;
+}
+.top-row .container {
+    padding: 80px 0 100px;
+    background: #A27A8D;
 }
 .px-0 {
     padding-right: 0;
