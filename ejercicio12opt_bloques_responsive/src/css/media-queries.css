@@ -1,0 +1,101 @@
+.col-1 {
+    width: 8.33%;
+    flex: 0 0 8.33%;
+    max-width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+}
+.col-3 {
+    width: 23%;
+    flex: 0 0 23%;
+    max-width: 23%;
+}
+.col-4 {
+    width: 31.54%;
+    flex: 0 0 31.54%;
+    max-width: 31.54%;
+}
+.col-5 {
+    width: 41.66%;
+    flex: 0 0 41.66%;
+    max-width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+    flex: 0 0 58.33%;
+    max-width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+}
+.col-9 {
+    width: 72%;
+    flex: 0 0 72%;
+    max-width: 72%;
+}
+.col-10 {
+    width: 83.33%;
+    flex: 0 0 83.33%;
+    max-width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+    flex: 0 0 91.66%;
+    max-width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 680px) {
+    [class*="col-"] {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #navigation {
+        display: none !important;
+    }
+    .col-9 {
+        width: 93.9% !important;
+        flex: 0 0 93.9% !important;
+        max-width: 93.9% !important;
+    }
+    .col-9 .col-4 {
+        width: 100% !important;
+        flex: 100% !important;
+        max-width: 100% !important;
+    }
+    #main-content .subcontents {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}
+@media only screen and (min-width: 681px) and (max-width:1023px) {
+    #navigation {
+        display: none !important;
+    }
+    .col-9 {
+        width: 95%;
+        flex: 0 0 95%;
+        max-width: 95%;
+    }
+    .col-4 {
+        width: 47.8%;
+        flex: 0 0 47.8%;
+        max-width: 47.8%;
+        margin-bottom: 10px;
+    }
+}
