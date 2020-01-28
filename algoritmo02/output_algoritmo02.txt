@@ -92,7 +92,7 @@ ALGORITMO II - PARTE II:
 1.Print 1 to x
 
 function printUpTo(x) {
-  for(i<=0;i<=x;i++){
+  for(i=0;i<=x;i++){
     if(i<0){
         return false;
     }
@@ -110,16 +110,14 @@ console.log(y);
 
 function printSum(x) {
   var sum = 0;
-  for(var i=0; i<x; i++){
+  for(var i=0; i<=x; i++){
     console.log(i);
-    for(var j=0; j<x.lenght;j++) {
-        sum += x[j];
-    }
+    sum+=i;
   }
   return sum;
 }
-y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
-console.log(y) // // debería imprimir 32640
+y = printSum(255)
+console.log(y)
 
 
 3.PrintSumArray
@@ -127,7 +125,7 @@ console.log(y) // // debería imprimir 32640
 function printSumArray(x) {
   var sum = 0;
   for(var i=0; i<x.length; i++) {
-     sum += x[i];
+    sum += x[i];
   }
   return sum;
 }
