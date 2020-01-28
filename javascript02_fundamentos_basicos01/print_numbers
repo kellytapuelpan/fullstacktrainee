@@ -1,0 +1,10 @@
+Funcion imprimir numeros del 0 al 100 solo si son pares y multiplos de 3
+
+function getNumbers() {
+	for(i=0;i<=100;i++){
+		if(i%2==0 && i%3==0) {
+			console.log(i);
+		}
+	}
+}
+getNumbers();

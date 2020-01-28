@@ -1,3 +1,5 @@
+Funcion obtener área de una circunferencia
+
 function getArea(x){
     this.radius = x;
     this.area = function () {
@@ -7,7 +9,8 @@ function getArea(x){
 var z = new getArea(10);
 console.log(z.area());
 
-otra opción:
+
+//otra opción:
 
 var pi=3.1416;
 function getArea(r){
