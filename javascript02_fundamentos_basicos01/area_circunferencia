@@ -1,0 +1,17 @@
+function getArea(x){
+    this.radius = x;
+    this.area = function () {
+        return Math.PI * x * x;
+    };
+}
+var z = new getArea(10);
+console.log(z.area());
+
+otra opción:
+
+var pi=3.1416;
+function getArea(r){
+	var area = pi*r*r;
+	return area;
+}
+console.log(getArea(4));
