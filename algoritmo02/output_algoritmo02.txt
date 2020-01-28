@@ -1,5 +1,5 @@
 
-ALGORITMO II:
+ALGORITMO II - PARTE I:
 1)
 function multiply(x,y) {
     console.log(x);
@@ -86,3 +86,63 @@ z = looping(3,5);
 console.log(z);
 
 OUTPUT: 0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
+
+
+ALGORITMO II - PARTE II:
+
+1.Print 1 to x
+
+function printUpTo(x) {
+  for(i<=0;i<=x;i++){
+    if(i<0){
+        return false;
+    }
+    else {
+        console.log(i);
+    }
+  }
+}
+printUpTo(1000);
+y = printUpTo(-10); // debería imprimir false
+console.log(y); // debería imprimir false
+
+
+2.PrintSum
+
+function printSum(x) {
+  var sum = 0;
+  for(var i=0; i<x; i++){
+    console.log(i);
+    for(var j=0; j<x.lenght;j++) {
+        sum += x[j];
+    }
+  }
+  return sum;
+}
+y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
+console.log(y) // // debería imprimir 32640
+
+
+3.PrintSumArray
+
+function printSumArray(x) {
+  var sum = 0;
+  for(var i=0; i<x.length; i++) {
+     sum += x[i];
+  }
+  return sum;
+}
+console.log( printSumArray([1,2,3]) );
+
+
+4. Bonus: LargestElement
+
+var array = [3,6,200,56,32,5,89,32];
+var largest= 0;
+
+for (i=0; i<=largest;i++){
+    if (array[i]>largest) {
+        var largest=array[i];
+    }
+}
+console.log(largest);
