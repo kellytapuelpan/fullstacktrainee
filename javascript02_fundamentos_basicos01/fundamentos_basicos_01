@@ -167,6 +167,16 @@ function valueSwap() {
 }
 valueSwap();
 
+//Otra opción
+
+function valueSwap(x) {
+	for (var i = 0; x.length >= 2; i++) {
+		[x[0], x[x.length - 1]] = [x[x.length - 1], x[0]];
+    	return x;
+	}
+}
+valueSwap([1,5,10,-2]);
+
 
 13.De Número a String
 
