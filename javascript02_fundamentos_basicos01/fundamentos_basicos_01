@@ -93,7 +93,6 @@ function getImparTo() {
 getImparTo();
 
 
-
 8. Mayor que Y
 
 function getGreaterThan(y, numbers) {
@@ -121,19 +120,21 @@ function getSquare() {
 getSquare();
 
 
-10.Negativos - Dado un array con múltiples valores, escribe una función que reemplace cualquier número negativo dentro del array por 0. Cuando el programa esté listo, el array no debiera contener números negativos (ej: [1,5,10,-2] se convertirá en [1,5,10,0]).
+10.Negativos
 
-	function numReplace(x) {
-		var items = [523, -3452, -334, 31, 5346];
-		var x=0;
-		var index = items.indexOf(-x);
+function numReplace(x) {
+	var items = [523, -3452, -334, 31, 5346];
+	var index = items.indexOf(x<0);
 
-		if (index == -x) {
-	    	items[index] = 0;
+	for (var i = 0; i < items.length; i++) {
+		if (items[i] < 0) {
+			items[i] = 0;
 		}
-		console.log(items);
 	}
-	numReplace();
+
+	console.log(items);
+}
+numReplace();
 
 
 11.Max/Min/Avg
