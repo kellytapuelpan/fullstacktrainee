@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Área de circunferencia</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   </head>
+
+   <body>
+   		<div class="wrapper">
+   			<div class="container text-center py-5">
+   				<div class="col-6 offset-3">
+			   		<form id="" action="/" post="">
+			   			<div class="form-group">
+				   			<input id="number" type="text" class="form-control mb-3" placeholder="Ingresa el valor del radio de la circunferencia">
+				   			<button type="button" onclick="getRandom()" class="btn btn-primary">Calcular</button>
+				   		</div>
+			   		</form>
+			      	<div id="num" class="alert alert-primary"></div>
+			    </div>
+		    </div>
+      	</div>
+   </body>
+</html>
+
+<script>
+	var min = 0;
+	var max = 500;
+	var random = Math.floor(Math.random() * (+max - +min) + +min);
+	alert(random);
+
+	function getRandom(){
+		var x, res;
+		x = document.getElementById('number').value;
+
+		if(x==random) {
+			res = 'Ganaste';
+		} else {
+			res = 'Inténtalo nuevamente';
+		}
+
+		document.getElementById('num').innerHTML = res;
+	}
+
+</script>
