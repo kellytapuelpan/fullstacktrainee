@@ -40,16 +40,16 @@ sumImpar();
 
 function sum(input){
 	if (toString.call(input) !== "[object Array]")
-    return false;
+    	return false;
       
-    var total =  0;
-    for(var i=0;i<input.length;i++){                  
-        if(isNaN(input[i])){
-            continue;
-        }
-        total += Number(input[i]);
-    }
-    return total;
+    	var total =  0;
+    	for(var i=0;i<input.length;i++){                  
+        	if(isNaN(input[i])){
+            		continue;
+        	}
+        	total += Number(input[i]);
+    	}
+    	return total;
 }
 console.log(sum([1,2,5,15]));
 
@@ -120,8 +120,6 @@ getSquare([1,5,10,-2]);
 /*10.Negativos*/
 
 function numReplace(x) {
-	var index = x.indexOf(x<0);
-
 	for (var i = 0; i < x.length; i++) {
 		if (x[i] < 0) {
 			x[i] = 0;
