@@ -32,10 +32,18 @@
 		var x, res;
 		x = document.getElementById('number').value;
 
-		if(x==random) {
-			res = 'Ganaste';
-		} else {
-			res = 'Inténtalo nuevamente';
+		for (var i=3 ; i>0 ; i--) {
+			if(x==random) {
+				res = 'Ganaste!! :)';
+				break;
+			} 
+			else {
+				if(i === 0) {
+					res = 'Se te acabaron las oportunidades :(';
+			    } else {
+			        res = 'Te quedan ' + i + ' intento(s)';
+				}
+			}
 		}
 
 		document.getElementById('num').innerHTML = res;
