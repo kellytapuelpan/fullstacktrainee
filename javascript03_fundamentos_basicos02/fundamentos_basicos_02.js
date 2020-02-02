@@ -216,7 +216,7 @@ function centerRep(x) {
 		}
 	}
 	else {
-		for(var i=1; i<=length-2; i++) {
+		for(var i=1; i<=x.length-2; i++) {
 			temp = x[i-1];
 			swap = x[x.length + (i*-1)];
 
