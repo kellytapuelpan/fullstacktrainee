@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Área de circunferencia</title>
+      <title>Random number</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    </head>
 
@@ -9,44 +9,56 @@
    		<div class="wrapper">
    			<div class="container text-center py-5">
    				<div class="col-6 offset-3">
-			   		<form id="" action="/" post="">
+			   		<form id="random-form" action="/" method="POST">
 			   			<div class="form-group">
-				   			<input id="number" type="text" class="form-control mb-3" placeholder="Ingresa el valor del radio de la circunferencia">
-				   			<button type="button" onclick="getRandom()" class="btn btn-primary">Calcular</button>
+				   			<input id="number" type="text" class="form-control mb-3" placeholder="Adivina el n&uacute;mero">
+				   			<button type="button" onclick="getReset()" class="btn btn-primary">Generar nuevo n&uacute;mero</button>
+				   			<button type="button" onclick="getRandom()" class="btn btn-primary">Jugar!!</button>
 				   		</div>
 			   		</form>
 			      	<div id="num" class="alert alert-primary"></div>
 			    </div>
 		    </div>
       	</div>
+
+      	<script>
+			var min = 0;
+			var max = 100;
+			var random = Math.floor(Math.random() * (+max - +min) + +min);
+			var turns = 0;
+			alert(random);
+
+			function getRandom(){
+				var x, res;
+				x = document.getElementById('number').value;
+
+				if ((isNaN(x) || x < 0 || x > 100 ) && turns < 3){
+	                res = 'El valor ingresado no es válido';
+	                turns+=1;
+	            } else if (x == random && turns < 3) {
+					res = 'Ganaste!! :)';
+					turns=0;
+				} else if (x < random && turns < 3) {
+				    res = 'El número que ingresaste es más bajo. Intenta nuevamente.';
+				    turns += 1;
+				} else if (x > random && turns < 3) {
+				    res = 'El número que ingresaste es más alto. Intenta nuevamente.';
+				    turns += 1;
+				} else {
+				    res = 'Se te acabaron las oportunidades :(';
+				    turns += 1;
+				}
+
+				document.getElementById('num').innerHTML = res;
+			}
+
+			function getReset() {
+				var random = Math.floor(Math.random() * (+max - +min) + +min);
+				window.location.reload();
+      			counter=0;
+			}
+
+		</script>
    </body>
 </html>
 
-<script>
-	var min = 0;
-	var max = 500;
-	var random = Math.floor(Math.random() * (+max - +min) + +min);
-	alert(random);
-
-	function getRandom(){
-		var x, res;
-		x = document.getElementById('number').value;
-
-		for (var i=3 ; i>0 ; i--) {
-			if(x==random) {
-				res = 'Ganaste!! :)';
-				break;
-			} 
-			else {
-				if(i === 0) {
-					res = 'Se te acabaron las oportunidades :(';
-			    } else {
-			        res = 'Te quedan ' + i + ' intento(s)';
-				}
-			}
-		}
-
-		document.getElementById('num').innerHTML = res;
-	}
-
-</script>
