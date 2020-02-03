@@ -1,3 +1,5 @@
+//PARTE 1
+
 /*1.Sigma - Implementa una función sigma(num) que, dado un número, devuelve la suma de todos los enteros positivos 
 (incluyendo el número dado). Ej: sigma(3) = 6 (1+2+3); sigma(5) = 15 (1+2+3+4+5).*/
 
@@ -145,5 +147,19 @@ function repeatValues(x) {
 repeatValues([4,'Ulysses', 42, false]);
 
 
+//PARTE 2
+/*1. Crea una función Fib(n) que devuelve el enésimo número Fibonacci. Usa recursión para esto.*/
+
+function fib(n) {
+  	if (n <= 1) {
+  		return 1;
+  	}
+  	y = fib(n - 1) + fib(n - 2);
+  	return y;
+}
+fib(11);
+
+
+/*2.Relleno recursivo - por favor mira más abajo.*/
 
 
