@@ -28,6 +28,55 @@ a:hover img, button:hover {
 }
 
 /*OTHER STYLES*/
-h3 {font-size:22px; font-weight:bold;}
+.row h3 {font-size:22px; font-weight:bold;}
+.row h4 {font-size:16px; color: #666;}
+
+.square, .circle {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 25px;
+}
+
+.row.sdown-row div.square {
+  display: none;
+  background: #f00;
+}
+.row.stoggle-row div.circle {
+  border-radius: 50%;
+  background: #EA7D2E;
+}
+.row.fade-row div.circle {
+  border-radius: 50%;
+  background: #793B42;
+  display: none;
+}
+.row.fadeout-row div.circle {
+  border-radius: 50%;
+  background: #62586E;
+}
+.row.addclass-row div.square {
+  background: #f00;
+}
+.row.addclass-row div.square.pink {
+  background:#ff00a0;
+}
+.row.before-row div.square {
+  background: #0AA287;
+}
+.row.after-row div.square {
+  background: #271A36;
+}
+.row.html-row .red {
+  color: #f00;
+}
+.nice-text {
+  font-style: italic;
+  color:#2D1767;
+  font-weight: bold;
+}
+.blue {
+  color:#153B80;
+  font-weight: bold;
+}
 
 /*END*/
