@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color:#D5C19B;
+}
+
+/*TRANSITIONS*/
+a,
+input[type="submit"],
+a img, button {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+a:hover,
+input[type="submit"]:hover,
+a:hover img, button:hover {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/*Other Styles*/
+h2 {font-family: 'Roboto', sans-serif; font-size: 30px; color:#41182C;}
+h2 span {color: #821541; font-style:italic;}
+.cont-image {max-height: 250px; overflow: hidden; position: relative; outline:2px solid #821541;}
+.cont-image img {cursor: pointer;}
+
+/*END*/
