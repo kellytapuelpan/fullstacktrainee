@@ -1,5 +1,3 @@
-//PARTE 1
-
 /*1.Sigma - Implementa una función sigma(num) que, dado un número, devuelve la suma de todos los enteros positivos 
 (incluyendo el número dado). Ej: sigma(3) = 6 (1+2+3); sigma(5) = 15 (1+2+3+4+5).*/
 
@@ -160,6 +158,26 @@ function fib(n) {
 fib(11);
 
 
-/*2.Relleno recursivo - por favor mira más abajo.*/
+/*2.Relleno recursivo - Función se debe agregar al HTML entregado, al finals*/
+function fill(x,y,original_color, color){
+	if(y<0 || y>=world.length || x<0 || x>=10) {
+		return false;
+	}
+			
+	if(world[y][x] != original_color){
+		return false;
+	}
+				
+	world[y][x] = color;
+	fill(x,y-1,original_color, color);
+	fill(x,y+1,original_color, color);
+	fill(x-1,y,original_color, color);
+	fill(x+1,y,original_color, color);
+	drawWorld();
+}
+
+
+
+
 
 
