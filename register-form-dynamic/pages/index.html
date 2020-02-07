@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Formulario de Registro</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="../src/css/style.css" rel="stylesheet">
+   </head>
+
+   <body>
+      <div id="wrapper" class="py-5">
+         <div class="fullscreen-bg">
+            <video loop muted autoplay poster="../src/img/hd0936.jpg" class="fullscreen-bg__video">
+               <source src="../src/video/hd0936.webm" type="video/webm">
+               <source src="../src/video/hd0936.mp4" type="video/mp4">
+               <source src="../src/video/hd0936.ogv" type="video/ogg">
+            </video>
+         </div>
+
+         <div class="container">
+            <div class="row">
+               <div class="upform">
+                  <form>
+                     <div class="upform-header"></div>
+                     <div class="upform-main">
+                        <div class="input-block">
+                           <label for="nombres" class="label">Nombres</label>
+                           <div class="input-control">
+                              <input type="text" id="nombres" name="nombres" class="required" autocomplete="off">
+                           </div>
+                        </div>
+                        <div class="input-block">
+                           <label for="apellidos" class="label">Apellidos</label>
+                           <div class="input-control">
+                              <input type="text" id="apellidos" name="apellidos" class="required" autocomplete="off">
+                           </div>
+                        </div>
+                        <div class="input-block">
+                           <label for="rut" class="label">RUT</label>
+                           <div class="input-control">
+                              <input type="text" id="rut" name="rut" class="required" autocomplete="off">
+                           </div>
+                        </div>
+                        <div class="input-block">
+                           <label for="email">Email</label>
+                           <div class="input-control">
+                              <input type="text" id="email" name="email" class="required" autocomplete="off">
+                           </div>
+                        </div>
+                        <div class="input-block">
+                           <label for="nombres">Fecha de Nacimiento</label>
+                           <div class="input-control">
+                              <input type="text" id="fecha-nac" name="fecha-nac" class="required" autocomplete="off">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="upform-footer">
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div><!-- end of wrapper -->
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js'></script>
+      <script type="text/javascript" src="../src/js/validate.js"></script>
+      <script type="text/javascript" src="../src/js/functions.js"></script>
+   </body>
+</html>

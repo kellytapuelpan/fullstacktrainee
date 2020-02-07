@@ -1,0 +1,68 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    background-color:#fff;
+}
+
+/*TRANSITIONS*/
+a,
+input[type="submit"],
+a img, button {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+a:hover,
+input[type="submit"]:hover,
+a:hover img, button:hover {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/*Other Styles*/
+video {
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+}
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    width: 100%;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+h2 {font-family: 'Ubuntu', sans-serif; font-size: 30px; color:#fff; cursor:pointer;}
+form {
+  border: 2px dashed #fff;
+  border-radius: 10px;
+  background: url('../img/back.png') repeat left top;
+}
+input[type="text"], input[type="email"], input[type="date"] {border: 1px solid #ccc;}
+label {color:#666;}
+.error {border: 1px solid #BB0001 !important;}
+input.active {border:2px solid #037024; border-radius:5px;}
+label.active {color: #037024; font-weight: 700;}
+
+/*END*/
