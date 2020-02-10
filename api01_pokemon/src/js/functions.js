@@ -9,8 +9,10 @@ $( document ).ready(function(pokemon) {
 			var $newDiv = $("<div id="+ data.id + "><img id=" + data.id + " src=" + data.sprites.front_default + " alt=" + data.name +"></div>");
 			
 			if(data.id < 10){
-				$newDiv.attr("id", "pokemon0" + data.id);
+				$newDiv.attr("id", "pokemon-a" + data.id);
 				$newDiv.attr("data-id", "0" + data.id);
+			} else if(data.id < 99) {
+				$newDiv.attr("id", "pokemon-b" + data.id);
 			} else {
 				$newDiv.attr("id", "pokemon" + data.id);
 				$newDiv.attr("data-id", data.id);
