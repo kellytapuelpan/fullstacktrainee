@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color:#f8e8c9;
+}
+
+/*TRANSITIONS*/
+a,
+input[type="submit"],
+a img, button {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+a:hover,
+input[type="submit"]:hover,
+a:hover img, button:hover {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/*OTHER STYLES*/
+.cont-poke {
+  position:relative;
+  display: inline;
+  float: left;
+}
+.cont-img {
+  position:relative;
+  display: inline-block;
+}
+.img-poke {
+  cursor: pointer;
+}
+.img-poke-modal {
+  width: 30%;
+  margin: 0 auto;
+}
+.data-poke .modal-dialog {
+  background: #fff;
+  border: 1px solid #caf391;
+  border-radius: 20px;
+}
+.fade.in {
+  opacity: 1;
+}
+.modal {
+  font-family: 'Roboto',sans-serif;
+}
+.modal .close {
+  position: absolute; 
+  right: 20px;
+  top: 15px;
+}
+.modal h4 {
+  text-transform: capitalize;
+  color: #5a5a5d;
+}
+.modal ul {
+  list-style-type: none;
+}
+.modal ul li {
+  text-transform: capitalize;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-backdrop .fade .in {
+  opacity: 0.5 !important;
+}
+.modal-backdrop.fade {
+  opacity: 0.5 !important;
+}
+
+/*END*/
