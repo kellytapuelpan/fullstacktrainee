@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: url(../img/back.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+}
+
+/*TRANSITIONS*/
+a,
+input[type="submit"],
+a img, button {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+a:hover,
+input[type="submit"]:hover,
+a:hover img, button:hover {
+  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/*OTHER STYLES*/
+h1 {position: relative; color:#fff; font-size: 3em;}
+h1::before {content: ""; background: #fff; height: 2px; width: 135px; position: absolute; margin: 0 auto; left: 0; right: 0; bottom: -25px;}
+h3 {font-size: 1.5em;}
+.relative {position: relative;}
+.back-form {height: 100vh; background: rgba(6,64,117,0.68) none repeat scroll 0 0;}
+.weather span {font-size: 2em; font-weight: 600;}
+
+/*END*/
