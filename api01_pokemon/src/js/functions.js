@@ -11,7 +11,7 @@ $( document ).ready(function(pokemon) {
 			if(data.id < 10){
 				$newDiv.attr("id", "pokemon-a" + data.id);
 				$newDiv.attr("data-id", "0" + data.id);
-			} else if(data.id < 99) {
+			} else if(data.id < 100) {
 				$newDiv.attr("id", "pokemon-b" + data.id);
 			} else {
 				$newDiv.attr("id", "pokemon" + data.id);
