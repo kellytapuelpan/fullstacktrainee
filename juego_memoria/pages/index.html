@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>Memorice</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-      <link href="../src/css/style.css" rel="stylesheet">
-   </head>
+<head>
+    <title>Memorice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="../src/css/style.css" rel="stylesheet">
+</head>
 
-   <body>
-      <div class="wrapper">
-         <div class="container">
+<body onload="createDeck()">
+    <div class="wrapper">
+        <div class="container">
             <h1 class="py-4">Memorice</h1>
             
-            <section class="score-panel">
-                  <ul class="stars">
-                     <li>
-                        <i class="fa fa-star"></i>
-                     </li>
-                     <li>
-                        <i class="fa fa-star"></i>
-                     </li>
-                     <li>
-                        <i class="fa fa-star"></i>
-                     </li>
-                  </ul>
-                  <span class="moves">0</span> Moves | Time:
-                  <span class="timer">0</span> s
-                  <div class="restart">
-                     <i class="fa fa-repeat"></i>
-                  </div>
-
-                  <div class="modal fade" id="winnerModal" tabindex="-1" role="dialog" aria-labelledby="winnerModal-label">
-                     <div class="modal-dialog">
-                        <div class="modal-content">
-                           <div class="modal-header">
-                              <h4 class="modal-title" id="winnerModal-label">We Have a Winner!</h4>
-                           </div>
-                           <div class="modal-body">
-                              <p id="winnerText"></p>
-                           </div>
-                           <div class="modal-footer">
-                              <button type="button" onclick="init(), $rating.removeClass('fa-star-o').addClass('fa-star'); " class="btn btn-default" data-dismiss="modal">Go Again!</button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+            <section class="score-panel pb-3">
+                <span class="moves">0</span> Movimientos | <span id="timer">00:00:00</span>
+                <div class="restart">
+                    <i class="fa fa-repeat"></i>
+                </div>
             </section>
 
             <div class="deck row mb-5"></div>
-         </div>
-      </div>
+        </div>
+    </div>
 
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js'></script>-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script type="text/javascript" src="../src/js/functions.js"></script>
-   </body>
+    <div class="modal fade" id="winnerModal" tabindex="-1" role="dialog" aria-labelledby="winnerModal-label">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="winnerModal-label">Has ganado!!</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="winnerText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="init()" class="btn btn-default" data-dismiss="modal">Jugar de nuevo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/js/timer.js"></script>
+    <script type="text/javascript" src="../src/js/functions.js"></script>
+</body>
 </html>

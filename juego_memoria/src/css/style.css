@@ -13,27 +13,27 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    background: #cacaca
+    background: #F9F871
 }
 
 /*TRANSITIONS*/
 a,
 input[type="submit"],
 a img, button {
-  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 a:hover,
 input[type="submit"]:hover,
 a:hover img, button:hover {
-  -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 /*Other Styles*/
@@ -41,7 +41,6 @@ h1 {
     font-weight: 1000;
 }
 .deck {
-    /*background: linear-gradient(160deg, #cacaca 0%, #aa7ecd 100%);*/
     justify-content: space-between !important;
     align-items: center !important;
 }
@@ -60,10 +59,10 @@ h1 {
     position: relative;
     width: 100%;
     height: 100%;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid #FF9671;
     background: #fff;
     text-align: center;
+    overflow: hidden;
 }
 .deck .card.open .int-card {
     transform: rotateY(0) !important;
@@ -72,13 +71,24 @@ h1 {
 .deck .card.show .int-card {
     font-size: 50px;
 }
+.deck .card.show .int-card img, .deck .card.match .int-card img {
+    opacity: 1;
+}
 .deck .card.match .int-card {
     cursor: default;
-    background: #02ccba;
+    border: 4px solid #FF6F91;
     font-size: 50px;
 }
-.int-card i {
-
+.deck .card .int-card img {
+    position: absolute;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
 }
 
 /*
@@ -87,22 +97,8 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 345px;
     margin-bottom: 10px;
 }
-
-.score-panel .stars {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
-}
-
-.score-panel .stars li {
-    list-style: none;
-    display: inline-block;
-}
-
 .score-panel .restart {
     float: right;
     cursor: pointer;
@@ -113,7 +109,7 @@ h1 {
  */
 
 @media only screen and (max-width: 800px){
-    .deck .card{
+    .deck .card {
       height: 75px;
       line-height: 75px;
     }

@@ -1,68 +1,91 @@
+let timer= new Timer();
+function createDeck(){
+	$('img').hide();
+  	timer.addEventListener('secondsUpdated', function(e) { 
+  		$('#timer').html(timer.getTimeValues().toString());
+	});
+}
+
 $(function() {
+
 	let allCardsOrg= [
-		'fa fa-diamond',
-		'fa fa-paper-plane-o',
-		'fa fa-anchor',
-		'fa fa-bomb',
-		'fa fa-bolt',
-		'fa fa-cube',
-		'fa fa-leaf',
-		'fa fa-bicycle',
-		'fa fa-diamond',
-		'fa fa-paper-plane-o',
-		'fa fa-anchor',
-		'fa fa-bomb',
-		'fa fa-bolt',
-		'fa fa-cube',
-		'fa fa-leaf',
-		'fa fa-bicycle',
+		'../src/img/piglet.jpg',
+		'../src/img/piglet.jpg',
+		'../src/img/puppy.jpg',
+		'../src/img/puppy.jpg',
+		'../src/img/puppy2.jpeg',
+		'../src/img/puppy2.jpeg',
+		'../src/img/ericito.jpg',
+		'../src/img/ericito.jpg',
+		'../src/img/ericito2.jpeg',
+		'../src/img/ericito2.jpeg',
+		'../src/img/pandita.jpg',
+		'../src/img/pandita.jpg',
+		'../src/img/pandita2.jpg',
+		'../src/img/pandita2.jpg',
+		'../src/img/kittie.jpeg',
+		'../src/img/kittie.jpeg',
 	];
-  	const allCards = shuffle(allCardsOrg);
+  	
 	let clickedCards = [];
-	const deck = $('.deck');
 	let count = 0;
-	let stars = $('.stars');
+	const allCards = shuffle(allCardsOrg);
+	const deck = $('.deck');
 	const modal = document.getElementById('myModal');
 	const span = document.getElementsByClassName('close')[0];
 
+	if(count===0){
+		timer.start();
+	}
+
 	allCards.forEach(function(item) {
-		const liElement = createCard(item);
-		$(deck).append(liElement);
-		$('.deck div').addClass('open');
+		const cardElement = createCard(item);
+		$(deck).append(cardElement);
+		$('.card').addClass('open');
 	});
 
-	function createCard(cssClass) {
-		const liEl = document.createElement('div');
-		$(liEl).addClass('card col-md-3 col-6 mb-3');
+	function createCard(cssSrc) {
+		const int = document.createElement('div');
+		$(int).addClass('card col-md-3 col-6 mb-3');
 
-		const divEl = document.createElement('div');
-		$(divEl).addClass('int-card');
+		const divInt = document.createElement('div');
+		$(divInt).addClass('int-card');
 
-		const iEl = document.createElement('i');
-		$(iEl).addClass(cssClass);
+		const imag = document.createElement('img');
+		$(imag).attr('src',cssSrc);
 
-		$(liEl).append(divEl);
-		$(divEl).append(iEl);
+		$(int).append(divInt);
+		$(divInt).append(imag);
 
-		$(liEl).click(function(e) {
-			// remember "this" is card we have just clicked on
-			if ($(liEl).hasClass('show') && !$(liEl).hasClass()) {
+		$(int).click(function(e) {
+			if ($(int).hasClass('show') && !$(int).hasClass()) {
 				setInterval(onClick, 1000);
 			}
 			if (clickedCards.length <= 1) {
-				handleCardOnClick(this);
-				updateStarsScore();
 				checkIfWinner();
-        modalMessage();
+				handleCardOnClick(this);
+        		//modalMessage();
+			}
+			if ($('.match').length === 16) {
+				timer.stop();
 			}
 		});
 
-		return liEl;
+		return int;
 	}
-	// remember that clickedCard is "this".
+
+	function checkIfWinner() {
+		if ($('.match').length === 16) {
+			createDeck();
+			timer.stop();
+		}
+	}
+	if ($('.match').length === 16) {
+		timer.stop();
+	}
+
 	function handleCardOnClick(clickedCard) {
-		// now you  need to keep track of what cards have been clicked
-		console.log(clickedCard);
+		//console.log(clickedCard);
 
 		$(clickedCard).addClass('show');
 		clickedCards.push(clickedCard);
@@ -74,48 +97,35 @@ $(function() {
 				return count;
 			});
 
-			if (
-				$(clickedCards[0]).find('i').attr('class') ===
-				$(clickedCards[1]).find('i').attr('class')
-			) {
+			if ($(clickedCards[0]).find('img').attr('src') === $(clickedCards[1]).find('img').attr('src')) {
 				$('.show').addClass('match');
-				$('.deck div').removeClass('show');
+				$('.card').removeClass('show');
 				clickedCards = [];
 			} else {
 				setTimeout(function() {
-					$('.deck div').removeClass('show');
+					$('.card').removeClass('show');
 					clickedCards = [];
 				}, 1000);
 			}
 		}
 	}
 
-	function updateStarsScore() {
-		const stars = $('.stars').children();
-		if (count === 16) {
-			$(stars[0]).css('color', 'rgb(117, 148, 229)');
-		} else if (count === 25) {
-			$(stars[1]).css('color', 'rgb(117, 148, 229)');
-		}
-	}
-  function modalMessage(){
-	let time = $('h1.clock').html();
-	let starScore = $('.score-panel .stars').html();
-	$('div.modal-content p').html(function() {
-		return (
-			'Congrats you WON! ' +
-			`Your star level is <div class="score-panel"><ul class="stars">${starScore} </ul><div>` +
-			`and your time was <h1 class="clock">${time}</h1> ` +
-			'Want to try again?'
-	  );
-	 });
-  }
+  	function modalMessage(){
+		$('div.modal-content p').html(function() {
+			return (
+				'Has ganado! Quieres intentar nuevamente?'
+	  		);
+	 	});
+  	}
+
 	$('.restart').click(function(e) {
 		location.reload(this);
+		createDeck();
+	    timer.stop();
+	    $('#timer').html(timer.getTimeValues().toString());
 	});
 
-	/*modal JS from W3Schools.com*/
-	span.onclick = function() {
+	/*span.onclick = function() {
 		modal.style.display = 'none';
 		location.reload(clickedCards);
 	};
@@ -123,43 +133,8 @@ $(function() {
 		if (event.target == modal) {
 			modal.style.display = 'none';
 		}
-	};
+	};*/
 
-	function checkIfWinner() {
-		if ($('.match').length === 16) {
-			clearInterval(t);
-
-			modal.style.display = 'block';
-		}
-	}
-
-	let h1 = $('.clock').get(0);
-
-	let seconds = 0;
-	let minutes = 0;
-	let hours = 0;
-	let t;
-	function add() {
-		seconds++;
-		if (seconds >= 60) {
-			seconds = 0;
-			minutes++;
-			if (minutes >= 60) {
-				minutes = 0;
-				hours++;
-			}
-		}
-
-		h1.textContent =
-			(hours ? (hours > 9 ? hours : '0' + hours) : '00') +
-			':' +
-			(minutes ? (minutes > 9 ? minutes : '0' + minutes) : '00') +
-			':' +
-			(seconds > 9 ? seconds : '0' + seconds);
-	}
-	t = setInterval(add, 1000);
-
-	// Shuffle function from http://stackoverflow.com/a/2450976
 	function shuffle(array) {
 		var currentIndex = array.length,
 			temporaryValue,
@@ -174,4 +149,4 @@ $(function() {
 		}
 		return array;
 	}
-}); // end of createLiElement
+});
