@@ -13,7 +13,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    background: #F9F871
+    background: #F9F871;
 }
 
 /*TRANSITIONS*/
@@ -37,9 +37,8 @@ a:hover img, button:hover {
 }
 
 /*Other Styles*/
-h1 {
-    font-weight: 1000;
-}
+h1 {font-weight: 1000;}
+h4 {width: 100%;}
 .deck {
     justify-content: space-between !important;
     align-items: center !important;
@@ -97,11 +96,6 @@ h1 {
     opacity: 1 !important;
     display: block !important;
 }
-
-/*
- * Styles for the Score Panel
- */
-
 .score-panel {
     text-align: left;
     margin-bottom: 10px;
@@ -110,22 +104,41 @@ h1 {
     float: right;
     cursor: pointer;
 }
-
-/*
- * Responsiveness
- */
+.modal {
+    background: rgba(0, 0, 0, .7);
+}
+.modal-footer {
+    padding: 0;
+}
+.modal-dialog {
+    margin: 3rem auto;
+}
+#close-modal {
+    width: 100%;
+    background: #BB5B3E;
+    border-radius:0;
+    color: #fff;
+}
+#close-modal:hover, .btn-init:hover {
+    background: #F88F6F;
+    color: #fff;
+}
+.btn-init {
+    background: #BB5B3E;
+    color: #fff;
+}
 
 @media only screen and (max-width: 800px){
     .deck .card {
-      height: 75px;
-      line-height: 75px;
+        height: 75px;
+        line-height: 75px;
     }
 }
   
 @media only screen and (max-width: 450px){
-    .deck .card{
-      height: 50px;
-      line-height: 50px;
+    .deck .card {
+        height: 50px;
+        line-height: 50px;
     }
 }
 /*END*/

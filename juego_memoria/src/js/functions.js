@@ -2,7 +2,7 @@ let timer= new Timer();
 function createDeck(){
 	/*$('img').hide();*/
   	timer.addEventListener('secondsUpdated', function(e) { 
-  		$('#timer').html(timer.getTimeValues().toString());
+  		$('#timer, .modal-timer').html(timer.getTimeValues().toString());
 	});
 }
 
@@ -65,7 +65,6 @@ $(function() {
 			if (clickedCards.length <= 1) {
 				checkIfWinner();
 				handleCardOnClick(this);
-        		//modalMessage();
 			}
 			if ($('.match').length === 16) {
 				timer.stop();
@@ -112,14 +111,6 @@ $(function() {
 			}
 		}
 	}
-
-  	function modalMessage(){
-		$('div.modal-content p').html(function() {
-			return (
-				'Has ganado! Quieres intentar nuevamente?'
-	  		);
-	 	});
-  	}
 
 	$('.restart, #close-modal').click(function(e) {
 		location.reload(this);

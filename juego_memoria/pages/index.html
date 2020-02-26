@@ -17,7 +17,7 @@
             <section class="score-panel pb-3">
                 <span class="moves">0</span> Movimientos | <span id="timer">00:00:00</span>
                 <div class="restart">
-                    <i class="fa fa-repeat"></i>
+                    <button class="btn btn-init">Reiniciar <i class="fa fa-repeat"></i></button>
                 </div>
             </section>
 
@@ -28,14 +28,16 @@
     <div class="modal" id="winnerModal" tabindex="-1" role="dialog" aria-labelledby="winnerModal-label">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header text-center">
                     <h4 class="modal-title" id="winnerModal-label">Has ganado!!</h4>
                 </div>
-                <div class="modal-body">
-                    <p id="winnerText"></p>
+                <div class="modal-body text-center">
+                    <p>Y demoraste <span class="modal-timer"></span></p>
+                    <p>Bien hecho!! Quieres intentar nuevamente?</p>
+                    <p></p>
                 </div>
-                <div class="modal-footer">
-                    <button id="close-modal" type="button" class="btn btn-default" data-dismiss="modal">Jugar de nuevo</button>
+                <div class="modal-footer text-center">
+                    <button id="close-modal" type="button" class="btn btn-default p-3" data-dismiss="modal">Jugar de nuevo</button>
                 </div>
             </div>
         </div>
