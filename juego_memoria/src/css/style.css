@@ -90,6 +90,13 @@ h1 {
     right: 0;
     opacity: 0;
 }
+#winnerModal {
+    opacity: 0;
+}
+#winnerModal.show-modal {
+    opacity: 1 !important;
+    display: block !important;
+}
 
 /*
  * Styles for the Score Panel

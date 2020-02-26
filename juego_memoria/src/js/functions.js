@@ -1,6 +1,6 @@
 let timer= new Timer();
 function createDeck(){
-	$('img').hide();
+	/*$('img').hide();*/
   	timer.addEventListener('secondsUpdated', function(e) { 
   		$('#timer').html(timer.getTimeValues().toString());
 	});
@@ -31,7 +31,7 @@ $(function() {
 	let count = 0;
 	const allCards = shuffle(allCardsOrg);
 	const deck = $('.deck');
-	const modal = document.getElementById('myModal');
+	const modal = document.getElementById('winnerModal');
 	const span = document.getElementsByClassName('close')[0];
 
 	if(count===0){
@@ -53,6 +53,7 @@ $(function() {
 
 		const imag = document.createElement('img');
 		$(imag).attr('src',cssSrc);
+		$(imag).addClass('img-fluid');
 
 		$(int).append(divInt);
 		$(divInt).append(imag);
@@ -68,6 +69,7 @@ $(function() {
 			}
 			if ($('.match').length === 16) {
 				timer.stop();
+				$('#winnerModal').addClass('show-modal');
 			}
 		});
 
@@ -82,6 +84,7 @@ $(function() {
 	}
 	if ($('.match').length === 16) {
 		timer.stop();
+		$('#winnerModal').addClass('show-modal');
 	}
 
 	function handleCardOnClick(clickedCard) {
@@ -118,22 +121,15 @@ $(function() {
 	 	});
   	}
 
-	$('.restart').click(function(e) {
+	$('.restart, #close-modal').click(function(e) {
 		location.reload(this);
 		createDeck();
 	    timer.stop();
 	    $('#timer').html(timer.getTimeValues().toString());
 	});
-
-	/*span.onclick = function() {
-		modal.style.display = 'none';
-		location.reload(clickedCards);
-	};
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = 'none';
-		}
-	};*/
+	$("#close-modal").click(function(){
+		$('#winnerModal').removeClass('show-modal');
+	});
 
 	function shuffle(array) {
 		var currentIndex = array.length,
