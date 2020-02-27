@@ -40,6 +40,7 @@ a:hover img, button:hover {
 .cont-img {
   position:relative;
   display: inline-block;
+  border: 1px solid #fff;
 }
 .img-poke {
   cursor: pointer;
