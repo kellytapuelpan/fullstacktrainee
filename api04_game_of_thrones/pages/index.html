@@ -12,23 +12,24 @@
    <body>
       <div id="wrapper">
          <div class="container">
+            <div class="row py-5">
+               <div class="col-md-3 col-12">
+                  <img src="../src/img/stark.jpg" class="img-fluid" alt="House Stark" id="362">
+               </div>
+               <div class="col-md-3 col-12">
+                  <img src="../src/img/targaryen.jpg" class="img-fluid" alt="House Targaryen" id="378">
+               </div>
+               <div class="col-md-3 col-12">
+                  <img src="../src/img/lannister.jpg" class="img-fluid" alt="House Lannister" id="230">
+               </div>
+               <div class="col-md-3 col-12">
+                  <img src="../src/img/baratheon.jpg" class="img-fluid" alt="House Baratheon" id="15">
+               </div>
+            </div>
             <div class="row">
-               <div class="col-md-8 col-12 offset-md-2 relative">
-                  <div class="back-form p-5">
-                     <div class="cont-header">
-                        <h1 class="text-center"><i class="fas fa-cloud-sun"></i> Weather in your city <i class="fas fa-cloud-sun"></i></h1>
-                     </div>
-                     <form id="weather-form" action="/" method="GET">
-                        <h3 class="text-center pt-4 pb-5 mt-5">Enter the name of your city or the city that you want to know the current temperature</h3>
-                        <div class="form-group row">
-                           <input id="city-data" class="form-control form-control-lg col-9" type="text" placeholder="Enter city name">
-                           <button type="submit" class="btn btn-primary col-3">Submit</button>
-                        </div>
-                     </form>
-                     <div class="weather text-center pt-4 pb-3">
-                        The temperature in <span class="city-name"></span> is <span class="city-temp"></span> &deg;F, but really feels like <span class="it_feels"></span> &deg;F
-                     </div>
-                  </div>
+               <h2 class="col-md-8 col-12 offset-md-2">House details</h2>
+               <div class="col-md-8 col-12 offset-md-2 house-rec">
+                  <div class="name"></div>
                </div>
             </div>
          </div>

@@ -1,26 +1,23 @@
-$(document).ready(function() {
-	$('.weather').hide();
+$( document ).ready(function() {
 
-	$('form').submit(function() {
-    	city = document.getElementById('city-data').value;
-    	url = "http://api.openweathermap.org/data/2.5/weather?q=" + encodeURIComponent(city) + "&appid=a1739ae497b642d73675a073fabf72c1";
+    var houses_id = [15,230,362,378];
 
-    	$('.weather').fadeIn();
+    for(i=0; i<houses_id.length; i++) {
+        url = "https://anapioficeandfire.com/api/houses/" + houses_id[i];
+        console.log(url);
+        console.log(houses_id[i]);
+        console.log("img#" + houses_id[i]);
 
-        $.get(url, function(res) {
-            var $newCity = city;
-            var $deg = res.main.temp;
-            var $feels = res.main.feels_like;
+        $.get(url, function(data) {
+            $('img#'+ houses_id[i]).click(function(){
+                var $houseName = data.name;
+                var $houseWords = data.words;
+                console.log($houseName);
+                console.log($houseWords);
 
-            $(".city-name").append($newCity);
-            $(".city-temp").append($deg);
-            $(".it_feels").append($feels);
-        }, 'json');
-        return false;
-    });
-
-    $('#city-data').on('change', function() {
-        $('.weather').hide();
-        $('.city-name, .city-temp, .it_feels').html('');
-    });
+                $('.name').append($houseName);
+                $('.words').append($houseWords);
+            });
+        }, "json" );
+    }
 });

@@ -10,7 +10,7 @@ body {
 body::after {
     content: "";
     background: url(../img/back.jpg) no-repeat center center fixed;
-    opacity: 0.2;
+    opacity: 0.8;
     top: 0;
     left: 0;
     bottom: 0;
@@ -44,10 +44,6 @@ a:hover img, button:hover {
 }
 
 /*OTHER STYLES*/
-h1 {position: relative; color:#fff; font-size: 3em;}
-h1::before {content: ""; background: #fff; height: 2px; width: 135px; position: absolute; margin: 0 auto; left: 0; right: 0; bottom: -25px;}
-h3 {font-size: 1.5em;}
-.relative {position: relative;}
-.weather span {font-size: 2em; font-weight: 600;}
+img {cursor: pointer;}
 
 /*END*/
