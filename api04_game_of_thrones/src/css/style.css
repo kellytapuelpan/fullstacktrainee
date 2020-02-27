@@ -3,14 +3,10 @@
     padding: 0px;
 }
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lora', sans-serif;
     font-weight: 400;
     color: #fff;
-}
-body::after {
-    content: "";
-    background: url(../img/back.jpg) no-repeat center center fixed;
-    opacity: 0.8;
+    background: url(../img/back.png) no-repeat center center fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -21,6 +17,7 @@ body::after {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-bottom: 80px;
 }
 
 /*TRANSITIONS*/
@@ -44,6 +41,20 @@ a:hover img, button:hover {
 }
 
 /*OTHER STYLES*/
-img {cursor: pointer;}
+img {cursor: pointer; border:1px solid #fff;}
+img:hover {outline: 3px solid #fff;}
+h2 {width: 100%; font-size: 24px; font-weight: 700; border-bottom: 1px solid #fff; text-transform: uppercase;}
+.rec-data {
+    background: url(../img/bg-rec.jpg) repeat center center;
+}
+.words {
+    font-style: italic;
+    font-size: 20px;
+    border-bottom: 1px solid #fff;
+}
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
 
 /*END*/

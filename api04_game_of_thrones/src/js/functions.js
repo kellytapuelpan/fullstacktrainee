@@ -2,22 +2,50 @@ $( document ).ready(function() {
 
     var houses_id = [15,230,362,378];
 
-    for(i=0; i<houses_id.length; i++) {
+    $.each(houses_id, function(i, value) {
         url = "https://anapioficeandfire.com/api/houses/" + houses_id[i];
-        console.log(url);
-        console.log(houses_id[i]);
-        console.log("img#" + houses_id[i]);
 
         $.get(url, function(data) {
-            $('img#'+ houses_id[i]).click(function(){
-                var $houseName = data.name;
-                var $houseWords = data.words;
-                console.log($houseName);
-                console.log($houseWords);
+            $('img').click(function(e){
+                e.preventDefault();
+                $('.house-data').slideDown();
+                var t = $(this).attr('id'); 
+                
+                if(t==houses_id[i]) {
+                    var $houseName = data.name;
+                    var $houseWords = data.words;
+                    var $titles = data.titles;
+                    var $region = data.region;
+                    var $founded = data.founded;
 
-                $('.name').append($houseName);
-                $('.words').append($houseWords);
+                    $('.name').fadeOut(0,function(){
+                        $(this).html($houseName).fadeIn();
+                    });
+                    $('.words').fadeOut(0,function(){
+                        $(this).html($houseWords).fadeIn();
+                    });
+
+                    var output = '';
+                    output += '<ul class="col-6 offset-3">';
+                    $.each($titles, function (index, value) {
+                        output += '<li>' + value + '</li>';
+                    });
+                    output += '</ul>';
+
+                    $('.titles').fadeOut(0,function(){
+                        $(this).html(output).fadeIn();
+                    });
+
+                    $('.region').fadeOut(0,function(){
+                        $(this).html('<strong>Region:</strong> ' + $region).fadeIn();
+                    });
+
+                    $('.founded').fadeOut(0,function(){
+                        $(this).html('<strong>Founded:</strong> ' + $founded).fadeIn();
+                    });
+
+                }
             });
         }, "json" );
-    }
+    });
 });
