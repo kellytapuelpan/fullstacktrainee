@@ -42,6 +42,6 @@ h1::before {content: ""; background: #fff; height: 2px; width: 135px; position: 
 h3 {font-size: 1.5em;}
 .relative {position: relative;}
 .back-form {height: 100vh; background: rgba(6,64,117,0.68) none repeat scroll 0 0;}
-.weather span {font-size: 2em; font-weight: 600;}
+.weather span {font-size: 2em; font-weight: 600; line-height:160%;}
 
 /*END*/

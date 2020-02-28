@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.weather').hide();
+	$('.weather, .error').hide();
 
 	$('form').submit(function() {
     	city = document.getElementById('city-data').value;
@@ -7,20 +7,26 @@ $(document).ready(function() {
 
     	$('.weather').fadeIn();
 
-        $.get(url, function(res) {
-            var $newCity = city;
-            var $deg = res.main.temp;
-            var $feels = res.main.feels_like;
+        if($('#city-data').val()!='' ) {
+            $.get(url, function(res) {
+                var $newCity = city;
+                var $deg = res.main.temp;
+                var $feels = res.main.feels_like;
 
-            $(".city-name").append($newCity);
-            $(".city-temp").append($deg);
-            $(".it_feels").append($feels);
-        }, 'json');
-        return false;
+                $('.city-name').append($newCity);
+                $('.city-temp').append($deg);
+                $('.it_feels').append($feels);
+            }, 'json');
+            return false;
+        } else {
+            $('.weather').hide();
+            $('.error').fadeIn();
+            return false;
+        }
     });
 
     $('#city-data').on('change', function() {
-        $('.weather').hide();
+        $('.weather, .error').hide();
         $('.city-name, .city-temp, .it_feels').html('');
     });
 });
