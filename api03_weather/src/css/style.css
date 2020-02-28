@@ -41,7 +41,10 @@ h1 {position: relative; color:#fff; font-size: 3em;}
 h1::before {content: ""; background: #fff; height: 2px; width: 135px; position: absolute; margin: 0 auto; left: 0; right: 0; bottom: -25px;}
 h3 {font-size: 1.5em;}
 .relative {position: relative;}
-.back-form {height: 100vh; background: rgba(6,64,117,0.68) none repeat scroll 0 0;}
+.back-form {height: 100%; background: rgba(6,64,117,0.68) none repeat scroll 0 0;}
+.form-group {padding: 0 15px;}
 .weather span {font-size: 2em; font-weight: 600; line-height:160%;}
+.city-name {text-transform: capitalize;}
+#map {height: 300px; width: 100%;}
 
 /*END*/

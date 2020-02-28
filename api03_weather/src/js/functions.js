@@ -16,6 +16,17 @@ $(document).ready(function() {
                 $('.city-name').append($newCity);
                 $('.city-temp').append($deg);
                 $('.it_feels').append($feels);
+
+                var map;
+                function initMap() {
+                    var $newLat = res.coord.lat;
+                    var $newLng = res.coord.lon;
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: $newLat, lng: $newLng},
+                        zoom: 8
+                    });
+                }
+                initMap();
             }, 'json');
             return false;
         } else {
@@ -29,4 +40,5 @@ $(document).ready(function() {
         $('.weather, .error').hide();
         $('.city-name, .city-temp, .it_feels').html('');
     });
+
 });

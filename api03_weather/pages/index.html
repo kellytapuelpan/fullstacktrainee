@@ -13,24 +13,25 @@
       <div id="wrapper">
          <div class="container">
             <div class="row">
-               <div class="col-md-8 col-12 offset-md-2 relative">
+               <div class="col-md-8 col-sm-10 col-12 offset-md-2 offset sm-1 relative">
                   <div class="back-form p-5">
                      <div class="cont-header">
                         <h1 class="text-center"><i class="fas fa-cloud-sun"></i> Weather in your city <i class="fas fa-cloud-sun"></i></h1>
                      </div>
                      <form id="weather-form" action="/" method="GET">
-                        <h3 class="text-center pt-4 pb-5 mt-5">Enter the name of your city or the city that you want to know the current temperature</h3>
-                        <div class="form-group row">
+                        <h3 class="text-center pt-4 pb-4 mt-5">Enter the name of your city or the city that you want to know the current temperature</h3>
+                        <div class="form-group row mb-2">
                            <input id="city-data" class="form-control form-control-lg col-9" type="text" placeholder="Enter city name">
                            <button type="submit" class="btn btn-primary col-3">Submit</button>
                         </div>
                      </form>
-                     <div class="weather text-center pt-4 pb-3">
+                     <div class="weather text-center pt-4 pb-3 mb-4">
                         The temperature in <span class="city-name"></span> is <span class="city-temp"></span> &deg;F,<br> but really feels like <span class="it_feels"></span> &deg;F
                      </div>
-                     <div class="error text-center">
+                     <div class="error text-center pt-4 mb-4">
                         You should write a city name!!
                      </div>
+                     <div id="map"></div>
                   </div>
                </div>
             </div>
@@ -42,7 +43,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
       <script defer src="../src/js/all.js"></script>
       <script type="text/javascript" src="../src/js/functions.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ3DrlGOxU8avCYVnpNmq9Ma-3_J_goY0&callback=initMap"
+       async defer></script>
    </body>
 </html>
