@@ -1,0 +1,56 @@
+/*INSERT*/
+INSERT INTO pais (id_pais, nombre)
+VALUES (14,'Bahamas'),
+(15,'Bangladés'),
+(16,'Barbados'),
+(17,'Baréin'),
+(18,'Bélgica'),
+(19,'Belice'),
+(20,'Benín'),
+(21,'Bielorrusia'),
+(22,'Birmania / Myanmar'),
+(23,'Bolivia'),
+(24,'Bosnia y Herzegovina'),
+(25,'Botsuana'),
+(26,'Brasil'),
+(27,'Brunei'),
+(28,'Bulgaria'),
+(29,'Burkina Faso'),
+(30,'Burundi'),
+(31,'Bután')
+;
+
+INSERT INTO aeropuerto (id_aeropuerto,codigo,nombre,id_ciudad)
+VALUES (6,'GRZ','Aeropuerto de Graz',6),
+(7,'INN','Aeropuerto de Innsbruck',7),
+(8,'KLU','Aeropuerto de Klagenfurt',8),
+(9,'LNZ','Aeropuerto de Linz',9),
+(10,'SZG','Aeropuerto W.A.Mozart',10),
+(11,'VIE','Aeropuerto Internacional de Viena',11)
+;
+
+/*SELECT*/
+SELECT nombre FROM pais WHERE id_pais BETWEEN 1 and 10;
+
+SELECT codigo FROM aeropuerto WHERE id_ciudad <= 10 ORDER BY id_aeropuerto DESC;
+
+SELECT * FROM ciudad
+JOIN pais ON pais.id_pais = ciudad.id_pais
+;
+
+
+/*UPDATE*/ 
+UPDATE pais SET nombre_pais = 'Azerbaiyan'
+WHERE id_pais = 13
+;
+
+UPDATE pais SET nombre_pais = 'Botswana'
+WHERE id_pais = 25
+;
+
+UPDATE pais SET nombre_pais = 'Bangladesh'
+WHERE id_pais = 15
+;
+
+/*DELETE*/
+DELETE FROM pais WHERE id_pais = 31;
