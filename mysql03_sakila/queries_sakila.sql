@@ -1,0 +1,80 @@
+/* 1. ¿Qué consulta ejecutarías para obtener todos los clientes dentro de city_id = 312? 
+Su consulta debe devolver el nombre, apellido, correo electrónico y dirección del cliente.*/
+
+SELECT a.city_id, first_name, last_name, email, a.address FROM customer c
+INNER JOIN address a ON a.address_id = c.address_id
+WHERE city_id = '312';
+
+
+/* 2. ¿Qué consulta harías para obtener todas las películas de comedia? 
+Su consulta debe devolver el título de la película, la descripción, el año de estreno, la calificación, 
+las características especiales y el género (categoría).*/
+
+SELECT title, description, release_year, rating, special_features, c.name FROM film f
+INNER JOIN film_category a ON a.film_id = f.film_id
+INNER JOIN category c ON c.category_id = a.category_id
+WHERE c.name = 'Comedy';
+
+
+/* 3. ¿Qué consulta harías para obtener todas las películas unidas por actor_id = 5? 
+Su consulta debe devolver la identificación del actor, el nombre del actor, el título de la película, la descripción 
+y el año de lanzamiento.*/
+
+SELECT a.actor_id, CONCAT('',first_name, ' ',last_name,'') AS actor_name, m.title, m.description, m.release_year FROM actor a
+INNER JOIN film_actor t ON t.actor_id = a.actor_id
+INNER JOIN film m ON m.film_id = t.film_id
+WHERE a.actor_id = 5;
+
+
+/* 4. ¿Qué consulta ejecutaría para obtener todos los clientes en store_id = 1 y dentro de estas ciudades (1, 42, 312 y 459)? 
+Su consulta debe devolver el nombre, apellido, correo electrónico y dirección del cliente.*/
+
+SELECT first_name, last_name, email, a.address FROM customer c
+LEFT JOIN store s ON s.store_id = c.store_id
+LEFT JOIN address a ON a.address_id = c.address_id
+WHERE s.store_id = 1 AND a.city_id IN(1,42,312,459);
+
+
+/* 5. ¿Qué consulta realizarías para obtener todas las películas con una "calificación = G" y 
+"característica especial = detrás de escena", unidas por actor_id = 15? 
+Su consulta debe devolver el título de la película, la descripción, el año de lanzamiento, la calificación y la función especial. 
+Sugerencia: puede usar la función LIKE para obtener la parte 'detrás de escena'.*/
+
+SELECT f.film_id, title, description, release_year, rating, special_features FROM film f
+INNER JOIN film_actor a ON f.film_id = a.film_id
+WHERE actor_id= 15 AND rating = 'G' AND special_features LIKE '%Behind the Scenes%';
+
+
+/* 6. ¿Qué consulta harías para obtener todos los actores que se unieron en el film_id = 369? 
+Su consulta debe devolver film_id, title, actor_id y actor_name.*/
+
+SELECT f.film_id, m.title, a.actor_id, concat_ws('',first_name, ' ',last_name,'') AS actor_name FROM actor a
+INNER JOIN film_actor f ON f.actor_id = a.actor_id
+INNER JOIN film m ON m.film_id = f.film_id
+WHERE f.film_id = '369';
+
+
+/* 7. ¿Qué consulta harías para obtener todas las películas dramáticas con una tarifa de alquiler de 2.99? 
+Su consulta debe devolver el título de la película, la descripción, el año de estreno, la calificación, 
+las características especiales y el género (categoría).*/
+
+SELECT title, description, release_year, rating, special_features, c.name, rental_rate FROM film f
+INNER JOIN film_category t ON t.film_id = f.film_id
+INNER JOIN category c ON c.category_id = t.category_id
+WHERE c.name= 'Drama' AND rental_rate = 2.99;
+
+
+/* 8. ¿Qué consulta harías para obtener todas las películas de acción a las que se une SANDRA KILMER? 
+Su consulta debe devolver el título de la película, la descripción, el año de estreno, la calificación, 
+las características especiales, el género (categoría) y el nombre y apellido del actor.*/
+
+SELECT title, description, release_year, rating, special_features, c.name, CONCAT('',a.first_name,' ',a.last_name,'') AS actor_name FROM film f
+INNER JOIN film_category t ON t.film_id = f.film_id
+INNER JOIN film_actor l ON f.film_id = l.film_id
+INNER JOIN category c ON c.category_id = t.category_id
+INNER JOIN actor a ON a.actor_id = l.actor_id
+WHERE c.name= 'Action' AND a.first_name = 'Sandra' AND a.last_name = 'Kilmer';
+
+
+
+/**/

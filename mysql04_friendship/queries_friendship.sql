@@ -1,0 +1,66 @@
+/*---------------PRIMERA PARTE*/
+
+SELECT u.first_name, u.last_name, user2.first_name AS friend_first_name, user2.last_name AS friend_last_name FROM users u
+INNER JOIN friendships f ON f.user_id = u.id
+LEFT JOIN users as user2 ON f.friend_id = user2.id;
+
+/*---------------SEGUNDA PARTE*/
+
+/* 1. Devuelva a todos los usuarios que son amigos de Kermit, asegúrese de que sus nombres se muestren en los resultados.*/
+
+SELECT user2.first_name AS friend_first_name, user2.last_name AS friend_last_name, u.first_name, u.last_name FROM users u
+INNER JOIN friendships f ON f.user_id = u.id
+LEFT JOIN users as user2 ON f.friend_id = user2.id
+WHERE f.friend_id = 4;
+
+
+/* 2. Devuelve el recuento de todas las amistades.*/
+
+SELECT COUNT(user2.id) AS total_frienships FROM users u
+INNER JOIN friendships f ON f.user_id = u.id
+LEFT JOIN users as user2 ON f.friend_id = user2.id;
+
+
+/* 3. Descubre quién tiene más amigos y devuelve el recuento de sus amigos.*/
+
+SELECT COUNT(u.id) AS amount_of_friends, u.first_name, u.last_name FROM users u
+INNER JOIN friendships f ON f.user_id = u.id
+LEFT JOIN users as user2 ON f.friend_id = user2.id
+GROUP BY u.id
+ORDER BY COUNT(u.id) desc;
+
+
+/* 4. Crea un nuevo usuario y hazlos amigos de Eli Byers, Kermit The Frog y Marky Mark.*/
+
+INSERT INTO users
+VALUES (6,'Brad','Levine','2020-03-12 11:12:11',NULL);
+
+INSERT INTO friendships
+VALUES (7,6,2,'2020-03-12 11:12:11',NULL),
+(8,6,4,'2020-03-12 11:12:11',NULL),
+(9,6,5,'2020-03-12 11:12:11',NULL);
+
+
+/* 5. Devuelve a los amigos de Eli en orden alfabético.*/
+
+SELECT u.first_name, u.last_name, user2.first_name AS friend_first_name, user2.last_name AS friend_last_name FROM users u
+INNER JOIN friendships f ON f.user_id = u.id
+LEFT JOIN users as user2 ON f.friend_id = user2.id
+WHERE u.id = 2
+ORDER BY user2.first_name;
+
+
+/* 6. Eliminar a Marky Mark de los amigos de Eli.*/
+
+DELETE FROM friendships
+WHERE friend_id = 5 AND user_id = 2;
+
+
+/* 7. Devuelve todas las amistades, mostrando solo el nombre y apellido de ambos amigos*/
+
+SELECT u.first_name, u.last_name, user2.first_name AS friend_first_name, user2.last_name AS friend_last_name FROM users u
+INNER JOIN friendships f ON f.user_id = u.id
+LEFT JOIN users as user2 ON f.friend_id = user2.id;
+
+
+/**/
