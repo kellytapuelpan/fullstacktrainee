@@ -3,10 +3,10 @@ import java.util.*;
 
 public class AmpolletaTest {
 	public static void main (String[] args) {
-		boolean myBool = true;
+		boolean myBoolean = true;
 	    Ampolleta myLightbulb = new Ampolleta();
 	    
-	    while (myBool){
+	    while (myBoolean){
 	        Scanner input = new Scanner(System.in);
 	        System.out.println("Choose an option from the menu: \n 1. Turn it on \n 2. Turn it off \n 3. Lightbulb state \n 4. Change power \n 5. Get power \n 6. Change color \n 7. Get color \n 8. Charge \n 9. Exit");
 	        String userChoice = input.nextLine();
@@ -79,7 +79,7 @@ public class AmpolletaTest {
 	        	case 9:
 	        		System.out.println("Option selected: 9");
 	        		System.out.println("Goodbye :)");
-	                myBool = false;
+	                myBoolean = false;
 	        		break;
 	        }
 	    }

@@ -40,13 +40,13 @@ public class Ampolleta {
 	public String getColor(){
 	    return this.color;
 	}
+	
+	public void setHours(float hours){
+	    this.hours = hours;
+	}
 
 	public float getHours(){
 	    return this.hours;
-	}
-
-	public void setHours(float hours){
-	    this.hours = hours;
 	}
 
 	public void reload(float hours){
