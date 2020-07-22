@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8">
+<restaurant>
+    <breakfast>
+        <item category="bebidas">
+            <name>Café</name>
+            <description>Café simple con o sin azúcar</description>
+            <price>$1000</price>
+        </item>
+        <item category="bebidas">
+            <name>Chocolate caliente</name>
+            <description>Taza de chocolate caliente con o sin azúcar</description>
+            <price>$1500</price>
+        </item>
+        <item category="bebidas">
+            <name>Leche con plátano</name>
+            <description>Vaso grande de leche con plátano</description>
+            <price>$1800</price>
+        </item>
+        <item category="bebidas">
+            <name>Café con leche</name>
+            <description>Taza de café con leche enterqa o semidescremada</description>
+            <price>$1300</price>
+        </item>
+        <item category="bebidas">
+            <name>Jugo de Naranja</name>
+            <description>Un jugo hecho con naranjas.</description>
+            <price>$1500</price>
+        </item>
+        <item category="pasteleria">
+            <name>Torta Selva Negra</name>
+            <description>Trozo de torta Selva Negra.</description>
+            <price>$1800</price>
+        </item>
+        <item category="pasteleria">
+            <name>Torta Panqueque Naranja</name>
+            <description>Trozo de torta bizcocho panqueque naranja.</description>
+            <price>$1800</price>
+        </item>
+        <item category="sandwichs">
+            <name>Sandwich queso jamón</name>
+            <description>Sandwich dos capas queso jamón en pan de molde.</description>
+            <price>$1500</price>
+        </item>
+        <item category="sandwichs">
+            <name>Sandwich jamón palta</name>
+            <description>Sandwich dos capas jamón palta en pan de molde.</description>
+            <price>$2000</price>
+        </item>
+    </breakfast>
+    <dinner>
+        <item category="bebidas">
+            <name>Bebida</name>
+            <description>Gaseosa 500 cc.</description>
+            <price>$1500</price>
+        </item>
+        <item category="bebidas">
+            <name>Pisco Sour</name>
+            <description>Pisco Sour nacional</description>
+            <price>$2500</price>
+        </item>
+        <item category="bebidas">
+            <name>Menta</name>
+            <description>Menta frappé</description>
+            <price>$2500</price>
+        </item>
+        <item category="platos-de-fondo">
+            <name>Lomo a lo pobre</name>
+            <description>Lomo argentino 500 grs acompañado de papas fritas, cebolla caramelizada y huevo frito encima</description>
+            <price>$10500</price>
+        </item>
+        <item category="platos-de-fondo">
+            <name>Salmón con salsa de camarones</name>
+            <description>Salmón a la plancha con salsa de camarones, acompañado de arroz o ensalada</description>
+            <price>$8500</price>
+        </item>
+        <item category="platos-de-fondo">
+            <name>Ravioles a la bolognesa</name>
+            <description>Ravioles rellenos de carne, con salsa de tomates, romero y otras especies</description>
+            <price>$7800</price>
+        </item>
+        <item category="postres">
+            <name>Torta Helada</name>
+            <description>Trozo de torta helada merengue lúcuma</description>
+            <price>$2500</price>
+        </item>
+    </dinner>
+</restaurant>
