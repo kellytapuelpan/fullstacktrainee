@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+	text-align: center;
+	font-family:'Arial, sans-serif;'
+}
+.center {
+	text-align: center;
+}
+.blue {
+	background-color: blue;
+}
+.purple {
+	background-color: purple;
+}
+.size {
+	width: 50px;
+	height: 50px;
+}
+.content {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+.innercontent {
+	display: table-cell;
+}
+.no-margin {
+	margin: 0 !important;
+	padding: 0 !important;
+}
