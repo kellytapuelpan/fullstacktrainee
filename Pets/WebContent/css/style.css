@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+	background: #fff;
+}
+.center {
+	text-align: center;
+}
+.cont-form {
+	border: 1px solid #009ac7;
+	border-radius:10px;
+}
+.cont-form h2 {
+	color: #009ac7;
+	font-weight:bold;
+}
+.cont-result {
+	border: 1px solid #009ac7;
+	border-radius: 10px;
+}
+.cont-result h3 {
+	
+}
+.cont-result h2 {
+	color: #009ac7;
+	font-weight: bold;
+}
