@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body {
+	background: #7D0A4B;
+}
+.center {
+	text-align: center;
+}
+.cont-text {
+	color: #fff;
+}
+.cont-text h2 span {
+	font-weight:bold;
+}
+.cont-text h3 {
+	font-weight: bold;
+	font-size: 25px;
+	background: #DE0D83;
+	border-radius:5px;
+	display:inline-block;
+}
+.cont-date {
+	font-weight: bold;
+	font-size: 20px;
+	background: #DE0D83;
+	border-radius:5px;
+	display:inline-block;
+}
+.cont-date p {
+	margin:0;
+}
+.cont-button {
+	border-bottom: 1px solid #fff;
+}
+.cont-button .btn {
+	color: #fff;
+	background: #3FD982;
+	text-transform: uppercase;
+	border: 1px solid #3FD982;
+	font-weight: bold;
+	border-radius: 20px;
+}
+.cont-button .btn:hover {
+	opacity: .6;
+}
+.cont-border p {
+	font-weight: bold;
+}
