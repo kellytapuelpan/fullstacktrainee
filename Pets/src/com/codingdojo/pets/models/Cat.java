@@ -7,7 +7,7 @@ public class Cat extends Animal {
 	}
 
 	public String showAffection() {
-		return String.format("Your %s cat, %s, looked at you with some affection. You think.", this.getBreed(),
+		return String.format("Your %s cat, %s, looked at you with some affection. Give it some love!!", this.getBreed(),
 				this.getName());
 	}
 

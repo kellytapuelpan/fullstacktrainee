@@ -11,8 +11,8 @@
 	</head>
 	
 	<body>
-		<div class="container pt-5">
-			<div class="cont-result p-4">
+		<div class="container py-5">
+			<div class="cont-result p-4 text-center">
 				<h3>Dog's name: <c:out value="${dog.name}"/></h3>
 				<h3>Breed: <c:out value="${dog.breed}"/></h3>
 				<h3>Weight: <c:out value="${dog.getWeight()}"/></h3>

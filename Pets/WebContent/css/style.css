@@ -1,27 +1,37 @@
 @charset "UTF-8";
 
 body {
-	background: #fff;
+	background: url('../img/adopt-png.png') no-repeat center top #fff;
+	background-size: 180px 180px;
 }
 .center {
 	text-align: center;
 }
 .cont-form {
-	border: 1px solid #009ac7;
+	border: 1px solid #ff1635;
 	border-radius:10px;
+	margin-top: 150px;
+}
+.cont-form .btn {
+	background: #ff1635;
+	border:1px solid #ff1635;
 }
 .cont-form h2 {
-	color: #009ac7;
+	color: #ff1635;
 	font-weight:bold;
 }
 .cont-result {
-	border: 1px solid #009ac7;
+	border: 1px solid #ff1635;
 	border-radius: 10px;
+	margin-top: 150px;
 }
 .cont-result h3 {
 	
 }
 .cont-result h2 {
-	color: #009ac7;
+	color: #ff1635;
 	font-weight: bold;
+}
+.cont-result p {
+	color: #ff1635;
 }

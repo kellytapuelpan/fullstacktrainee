@@ -9,9 +9,9 @@ public class Dog extends Animal {
 	@Override
 	public String showAffection() {
 		if (this.getWeight() < 20) {
-			return String.format("%s hopped in your lap and cuddled you!", this.getName());
+			return String.format("Just hug it and put %s in your lap!!", this.getName());
 		} else {
-			return String.format("%s curled up next to you.", this.getName());
+			return String.format("%s it's too big!!, it will throw you to the ground when cuddle you.", this.getName());
 		}
 	}
 

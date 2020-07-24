@@ -13,7 +13,7 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-6 pt-5">
+				<div class="col-6 py-5">
 					<div class="cont-form p-3">
 						<h2>Create a Dog</h2>
 						
